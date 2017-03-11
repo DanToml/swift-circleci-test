@@ -1,0 +1,9 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: ibmcom/swift-ubuntu:3.0.2
+    workDir: /root/swift-circle-example
+    steps:
+      - checkout
+      - run: swift build
